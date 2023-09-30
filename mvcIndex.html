@@ -6,11 +6,22 @@
   <body>
     <main id="app">
       <h1>Exemplo de SPA sem framework no MVC pattern</h1>
-      <form id="todo-form">
-        <input type="text" id="todo-input" placeholder="Digite uma tarefa" />
-        <button type="submit">Adicionar</button>
-      </form>
-      <ul id="todo-list"></ul>
+      
+      <section id="home">
+        <form id="todo-form">
+          <input type="text" id="todo-input" placeholder="Digite uma tarefa"/>
+          <button type="submit">Adicionar</button>
+        </form>
+        <ul id="todo-list"></ul>
+      </section>
+      
+      <section id="edit" style="display: none">
+        <form id="edit-form">
+          <input type="text" id="edit-input" placeholder="Digite uma tarefa"/>
+          <button type="submit">Editar</button>
+        </form>
+      </section>
+
     </main>
     <script src="app.js"></script>
   </body>
