@@ -106,8 +106,8 @@ const view = {
     
     return action;
   },
-  promptName() {
-    return prompt('Digite um novo nome para o item:');
+  promptName(todo) {
+    return prompt('Digite um novo nome para o item:', todo.name);
   },
   confirmRemove(todo) {
     return confirm(`Deseja realmente remover o item "${todo.name}"?`);
@@ -133,7 +133,7 @@ const controller = {
     }
   },
   edit(todo) {
-    const newName = view.promptName();
+    const newName = view.promptName(todo);
     if (newName) {
       model.setName(todo, newName);
       view.render(model.getTodos());
