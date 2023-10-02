@@ -98,10 +98,6 @@ const view = {
     
     action.src = src;
     action.title = title;
-    action.width = 12;
-    action.height = 12;
-    action.style.cursor = 'pointer';
-    action.style.marginLeft = '3px';
     action.addEventListener('click', callback);
     
     return action;
