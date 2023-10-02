@@ -6,10 +6,16 @@ const model = {
   },
   add(name) {
     this.todos.push({
-      id: this.todos.length + 1,
+      id: this.getNextId(),
       name,
       completed: false
     });
+  },
+  getNextId() {
+    if (!this.todos.length) {
+      return 1;
+    }
+    return Math.max(...this.todos.map(item => item.id)) + 1;
   },
   remove(todo) {
     this.todos = this.todos.filter(aux => aux.id != todo.id);
